@@ -1,7 +1,7 @@
 library(shiny)
 library(ggplot2)
 
-means <- read.csv("ChodroffWilsonLingVan2017_talkerMeans.csv")
+means <- read.csv("ChodroffWilsonLingVan2018_talkerMeans.csv")
 
 # Define UI----
 ui <- fluidPage(
@@ -80,7 +80,8 @@ server <- function(input, output) {
   })
   
   # static text
-  output$article <- renderText({"This dataset will be released with the following Linguistics Vanguard publication: Chodroff, E. & Wilson, C. (accepted). Predictability of stop consonant phonetics across talkers: Between-category and within-category dependencies among cues for place and voice. The correlations of VOT were published in Chodroff, E. & Wilson, C. (2017). Structure in talker-specific phonetic realization: Covariation of stop consonant VOT in American English. Journal of Phonetics, 61, 30-47."})
+  output$article <- renderText({"This dataset was released with the following Linguistics Vanguard publication: Chodroff, E. & Wilson, C. (2018). Predictability of stop consonant phonetics across talkers: Between-category and within-category dependencies among cues for place and voice. Linguistics Vanguard 4(s2).\n\n\
+  The correlations of VOT were published in Chodroff, E. & Wilson, C. (2017). Structure in talker-specific phonetic realization: Covariation of stop consonant VOT in American English. Journal of Phonetics, 61, 30-47."})
   output$description <- renderText({"Talker mean voice onset time (VOT, ms) and center of gravity (COG, Hz) from 180 native speakers of American English in the Mixer 6 read speech corpus. All measurements were derived from word-initial, prevocalic stop consonants."})
   output$corText <- renderText({ "Pearson correlation: "})
   output$pvalText <- renderText({ "p-value: "})	
